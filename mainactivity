@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:background="#03A9F4"
+    android:weightSum="60"
+    android:layout_weight="40"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="2">
+        >
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:width="@android:dimen/app_icon_size"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#18E820"
+            android:scaleType="fitCenter"
+            />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#183BE8"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#18E820"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="12">
+
+
+        >
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:width="@android:dimen/app_icon_size"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#183BE8"
+            />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#18E820"
+
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#183BE8"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="12">
+        >
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:width="@android:dimen/app_icon_size"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#18E820"
+
+            />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#183BE8"
+
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button8"
+            android:text=""
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_weight="4"
+            android:background="#18E820"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="@android:dimen/app_icon_size"
+            android:textColor="#054C08"
+            android:id="@+id/tvplayer"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="@android:dimen/app_icon_size"
+            android:textColor="#054C08"
+            android:id="@+id/tvmessage"
+
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textSize="@android:dimen/app_icon_size"
+            android:background="#18E820"
+            android:id="@+id/buttonrestart"
+
+            />
+    </LinearLayout>
+</LinearLayout>
