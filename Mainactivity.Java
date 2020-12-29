@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             flag = false;
 
         }
+        String turn;
         int cnt=0;
         while(v.getId() != button[cnt].getId() && cnt<8) {
             cnt++;
@@ -57,17 +58,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (v.getId() ==button[cnt].getId()) {
                 if (flag == false) {
                     if (!myC.checkspottey(cnt).equals("filled")) {
-                        if (v.getId() == button[cnt].getId()) {
-                            myC.filler(cnt);
-                            if (myC.turn() == "x") {
-                                button[cnt].setText("x");
-                            } else {
-                                button[cnt].setText("0");
-                            }
-                            winner1();
+                        turn = myC.turn();
+                        myC.filler(turn, cnt);
+                        if (myC.checkspottey(cnt) == "x") {
+                            button[cnt].setText("x");
+                        } else if (myC.checkspottey(cnt) == "0") {
+                            button[cnt].setText("0");
                         }
+                        winner1();
                     }
-
                 }
             }
         }
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent= new Intent(this, SecondActivity.class);
         tvplayer=findViewById(R.id.tvplayer);
         Log.d("Gil", "checking winner");
-        if(myC.checkwinner().equals("0")){
+        if(myC.checkwinner().equals("x")){
              tvplayer.setText("player x won");
              WINNER=1;
             Log.d("Gil", "winner1: x won");
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("Gil", "TIE");
             flag=true;
         }
-        else if (myC.checkwinner().equals("x")) {
+        else if (myC.checkwinner().equals("0")) {
             tvplayer.setText("player 0 won");
             WINNER=0;
             Log.d("Gil", "winner1: 0 won");
