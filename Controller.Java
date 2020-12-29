@@ -12,8 +12,8 @@ public class Controller {
         else{ turn ="x";}
         return turn;
     }
-    public void filler(int x){
-        myM.fill(turn,x);
+    public void filler(String t, int x){
+        myM.fill(t,x);
     }
     public void start(){
         myM.startGame();
