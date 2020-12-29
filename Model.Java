@@ -13,8 +13,11 @@ public class Model {
             }
     }
     public String checkspot(int checker){
-        if(luach[checker]== "x" || luach[checker]== "0"){
-            return "filled";
+        if(luach[checker]== "x" ){
+            return "x";
+        }
+        else if(luach[checker]== "0"){
+            return "0";
         }
         else{
             return "";
@@ -24,18 +27,18 @@ public class Model {
         if(turn== "x"){
             luach[turns]="x";
         }
-        else if(turn== "0"){
+        else if(turn == "0"){
             luach[turns]="0";
         }
 
     }
     public String winner(){
         if( (luach[0]=="x" && luach[1]=="x" &&luach[2]=="x") || (luach[3]=="x" && luach[4]=="x" &&luach[5]=="x") ||  (luach[6]=="x" && luach[7]=="x" &&luach[8]=="x") ||   (luach[0]=="x" && luach[3]=="x" &&luach[6]=="x") || (luach[1]=="x" && luach[4]=="x" &&luach[7]=="x") ||  (luach[2]=="x" && luach[5]=="x" &&luach[8]=="x") ||  (luach[0]=="x" && luach[4]=="x" &&luach[8]=="x") ||  (luach[6]=="x" && luach[4]=="x" &&luach[2]=="x") ){
-            check= "x";//x is winner
+            this.check= "x";//x is winner
         }
         else if( (luach[0]=="0" && luach[1]=="0" &&luach[2]=="0") || (luach[3]=="0" && luach[4]=="0" &&luach[5]=="0") ||  (luach[6]=="0" && luach[7]=="0" &&luach[8]=="0") ||   (luach[0]=="0" && luach[3]=="0" &&luach[6]=="0") || (luach[1]=="0" && luach[4]=="0" &&luach[7]=="0") ||  (luach[2]=="0" && luach[5]=="0" &&luach[8]=="0") ||  (luach[0]=="0" && luach[4]=="0" &&luach[8]=="0") ||  (luach[6]=="0" && luach[4]=="0" &&luach[2]=="0") ){
 
-            check="0";//0 is winner
+            this.check="0";//0 is winner
         }
         else{
             int sum=0;
@@ -44,8 +47,8 @@ public class Model {
                         sum++;
                 }
             }
-            if(sum== 8||sum==9){
-                check="tie";
+            if(sum==9){
+                this.check="tie";
             }
             else{
                 check=" ";
