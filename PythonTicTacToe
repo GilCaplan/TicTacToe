@@ -57,7 +57,7 @@ def main():
                  7: '', 8: '', 9: ''}#new board which is empty at beggining of game
         print(' player1 is x, player 2 is 0')
         if (p1+p2)%2==1:#switch turns of who starts between each game so if total points is even then x starts otherwise if odd than o starts
-            game(board,0,'o')
+            winner = game(board,0,'o')
         else:
             winner = game(board)#run a round of the game
         if winner == 'x':#check for winner and add points accordingly
