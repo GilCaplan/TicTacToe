@@ -67,7 +67,7 @@ def main():
         elif winner == 'draw':#draw
             print(winner)
         print('score is: player1-', p1, ' player2-',p2)
-        playAgain= input('if you want to continue to play press y ')#if y or Y is pressed than a new game will start otherwise the program will close
+        playAgain= str(input('if you want to continue to play press y ')).strip() #if y or Y is pressed than a new game will start otherwise the program will close
         if playAgain !='y'and playAgain !='Y':
             play=False
 
