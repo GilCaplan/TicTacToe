@@ -35,16 +35,14 @@ def game(board,cnt=0, turn='x'):#is given a board, cnt default is 0 so if a new 
                 printBoard(board)
             else:
                 print('invalid move')
-                game(board, cnt, turn)#recursively go back and start the round again
-                return checkBoard(board)
+                return game(board, cnt, turn)#recursively go back and start the round again
             cnt+=1
             if turn == 'x':#changing turn
                 turn='o'
             else: turn= 'x'
          else:
               print('invalid move')
-              game(board, cnt, turn)
-              return checkBoard(board)
+              return game(board, cnt, turn)
         check= checkBoard(board)#checking for winner
         if check == 'x' or check == 'o':
             return check
